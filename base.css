@@ -1,0 +1,140 @@
+:root {
+    --scale: 2.0;
+    --sepia: #dcd9d241;
+    --light: #e9e8e3;
+}
+
+body {
+    background: white;
+}
+
+main {
+    margin: 0 auto;
+    border: 1px solid black;
+
+    width: calc(var(--scale) * 21.0rem);
+    height: calc(var(--scale) * 29.7rem);
+    background: var(--sepia);
+
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+}
+
+.upper {
+    /* padding: 15%; */
+    /* padding-bottom: 0; */
+    padding: 0;
+}
+
+.lower {
+    font-size: 12px;
+
+    height: 100%;
+    padding: var(--space) 8%;
+    --space: calc(2 / 4 * 8%);
+    --half-space: calc(0.5 * var(--space));
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 5% calc(7.5 * 1em) auto 1em;
+    align-items: center;
+    gap: 10px;
+}
+
+h1, h2 {
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.75em;
+    font-weight: normal;
+}
+
+hr {
+    border-style: solid;
+    background-color: black;
+    height: 0px;
+    margin: 0;
+}
+
+.tracks {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    height: 100%;
+
+    font-size: 12px;
+}
+
+.tracks .runtime {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.track {
+    width: 13em;
+    display: flex;
+
+    text-transform: uppercase;
+}
+
+.track .num {
+    width: 2ch;
+    margin-right: 0.1em;
+    /* text-align: right; */
+}
+
+.track .name {
+    font-weight: bold;
+}
+
+.colours {
+    display: flex;
+}
+
+.colours > * {
+    height: 7px;
+    width: 40px;
+}
+
+.date {
+    font-size: 12px;
+}
+
+.footer {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.footer .num {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-weight: bold;
+}
+
+.footer .date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    text-align: right;
+}
